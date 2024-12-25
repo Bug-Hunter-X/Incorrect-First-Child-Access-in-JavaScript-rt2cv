@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Correct way to access the first child element of the div with id "myDiv"
+    let firstElementChild = document.getElementById("myDiv").firstElementChild;
+    console.log(firstElementChild.textContent); //This will log the text content correctly
+    firstElementChild.textContent = "Modified text";
+  </script>
+</body>
+</html>
