@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Incorrect way to access the first child element of the div with id "myDiv"
+    let firstChild = document.getElementById("myDiv").firstChild;
+    console.log(firstChild.textContent); //This will log the text content correctly
+    firstChild.textContent = "Modified text";
+    //This will result in an error, as the first child might be a text node, not an element.
+    //This code will correctly get the first child element of the div
+    let firstElementChild = document.getElementById("myDiv").firstElementChild;
+    firstElementChild.textContent = "Correctly modified text"; 
+  </script>
+</body>
+</html>
